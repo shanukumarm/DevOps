@@ -1,0 +1,11 @@
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
+
+ADD https://nginx.org/download/nginx-1.24.0.zip c:/nginx.zip
+
+RUN powershell -Command Expand-Archive -Path C:\nginx.zip -DestinationPath C:\nginx
+
+WORKDIR C:/nginx/nginx-1.24.0
+
+EXPOSE 80
+
+CMD [ "nginx", "-g", "daemon off", "-c", "/etc/nginx/nginx.conf" ]

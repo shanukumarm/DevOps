@@ -1,0 +1,2 @@
+1. To create service principal and get credentials (appID can be used as username and password as password of ACR registry):
+ az ad sp create-for-rbac --name acr-aks-sp-learning --scopes /subscriptions/4d909174-d9a2-424b-adc9-f78c9dcefb96/resourceGroups/ACR-Learning/providers/Microsoft.ContainerRegistry/registries/shanukumarm --role acrpull --output yaml

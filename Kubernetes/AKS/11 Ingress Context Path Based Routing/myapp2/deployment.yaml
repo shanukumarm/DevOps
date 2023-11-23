@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myapp2
+  name: myapp2-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp2
+  template:
+    metadata:
+      labels:
+        app: myapp2
+    spec:
+      containers:
+      - image: stacksimplify/kube-nginxapp2:1.0.0
+        name: myapp2-container
+        ports:
+          - containerPort: 80

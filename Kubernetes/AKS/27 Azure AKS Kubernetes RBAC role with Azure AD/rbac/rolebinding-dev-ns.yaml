@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: dev-user-access-rolebinding
+  namespace: dev
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: dev-user-full-access-role
+subjects:
+- kind: Group
+  namespace: dev
+  name: 'd11202ce-a0e8-4b46-933d-ed4b39fd516b'   # group object id

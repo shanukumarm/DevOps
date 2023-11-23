@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: appcustomnginxaks 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: appcustomnginxaks
+  template:
+    metadata:
+      labels:
+        app: appcustomnginxaks 
+    spec:
+      containers:
+        - name: appcustomnginxaks 
+          image: nginx # shanukumarm.azurecr.io/customnginx
+          ports:
+          - containerPort: 80

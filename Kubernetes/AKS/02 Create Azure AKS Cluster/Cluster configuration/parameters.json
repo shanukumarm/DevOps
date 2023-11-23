@@ -1,0 +1,69 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "resourceName": {
+            "value": "Azure-AKS-Learning"
+        },
+        "location": {
+            "value": "centralindia"
+        },
+        "dnsPrefix": {
+            "value": "Azure-AKS-Learning-dns"
+        },
+        "kubernetesVersion": {
+            "value": "1.26.6"
+        },
+        "networkPlugin": {
+            "value": "azure"
+        },
+        "enableRBAC": {
+            "value": true
+        },
+        "nodeResourceGroup": {
+            "value": "MC_AKS-Learning_Azure-AKS-Learning_centralindia"
+        },
+        "upgradeChannel": {
+            "value": "patch"
+        },
+        "adminGroupObjectIDs": {
+            "value": []
+        },
+        "disableLocalAccounts": {
+            "value": false
+        },
+        "azureRbac": {
+            "value": false
+        },
+        "enablePrivateCluster": {
+            "value": false
+        },
+        "enableAzurePolicy": {
+            "value": false
+        },
+        "enableSecretStoreCSIDriver": {
+            "value": false
+        },
+        "vmssNodePool": {
+            "value": true
+        },
+        "vnetSubnetID": {
+            "value": "/subscriptions/4d909174-d9a2-424b-adc9-f78c9dcefb96/resourceGroups/AKS-Learning/providers/Microsoft.Network/virtualNetworks/AKS-Learning-vnet/subnets/default"
+        },
+        "serviceCidr": {
+            "value": "10.0.0.0/16"
+        },
+        "dnsServiceIP": {
+            "value": "10.0.0.10"
+        },
+        "workspaceName": {
+            "value": "DefaultWorkspace-4d909174-d9a2-424b-adc9-f78c9dcefb96-CIN"
+        },
+        "omsWorkspaceId": {
+            "value": "/subscriptions/4d909174-d9a2-424b-adc9-f78c9dcefb96/resourceGroups/DefaultResourceGroup-CIN/providers/Microsoft.OperationalInsights/workspaces/DefaultWorkspace-4d909174-d9a2-424b-adc9-f78c9dcefb96-CIN"
+        },
+        "workspaceRegion": {
+            "value": "centralindia"
+        }
+    }
+}

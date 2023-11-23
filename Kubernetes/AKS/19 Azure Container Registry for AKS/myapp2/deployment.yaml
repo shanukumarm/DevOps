@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: myapp1
+  name: myapp1-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: myapp1
+  template:
+    metadata:
+      labels:
+        app: myapp1
+    spec:
+      containers:
+      - image: shanukumarm.azurecr.io/eks-learning/custom-nginx:1.0.0
+        name: myapp1-container
+        ports:
+          - containerPort: 80
+      imagePullSecrets:
+        - name: acr-learning-secret

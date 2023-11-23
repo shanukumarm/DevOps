@@ -1,0 +1,13 @@
+FROM alpine:3.18
+
+RUN adduser -D -g 'nginx' nginx && \
+        apk update --no-cache && \
+        apk upgrade --no-cache && \
+        apk add nginx --no-cache && \
+        rm -rf /var/cache/apk/*
+
+EXPOSE 80
+
+USER nginx
+
+CMD ["nginx", "-g", "daemon off;", "-c", "/etc/nginx/nginx.conf"]

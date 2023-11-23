@@ -1,0 +1,1 @@
+In 'reclaimPolicy: Retain', Azure disk will get deleted only when you delete persistent volume, then delete Azure Disk (Azure disk can be deleted only pv is deleted).
