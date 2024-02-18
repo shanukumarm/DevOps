@@ -1,0 +1,4 @@
+apiVersion: v2
+name: application
+description: A Helm chart to manage Kubernetes resources
+version: 0.1.0
